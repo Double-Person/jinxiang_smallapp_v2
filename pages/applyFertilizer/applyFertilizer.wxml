@@ -1,0 +1,64 @@
+<!--pages/applyFertilizer/applyFertilizer.wxml-->
+<view class='container'>
+<view class='careful'>
+<view><text class='iconfont iconhome_notice'></text>请注意！</view>
+<view>* 可根据实际施肥情况，添加一条或多条记录</view>
+<view>* 每个阶段必选添加一次施肥记录后才能进行图片采集</view>
+<view>* 请注意不要对用一次施肥反复添加记录</view>
+</view>
+<view class='shifei'>是否施肥 <text>否</text><van-switch checked="{{ checked }}" bind:change="onChange" size="24px" active-color="#07c160" /><text>是</text></view>
+<view class='tips'>* 如果此阶段没有施肥，请选择“否”，无需填写以下内容</view>
+
+<view wx:if="{{checked}}">
+<view class='brand'>品牌</view>
+<picker mode="multiSelector" bindchange='bindBrand' value='{{brandIndex}}' range='{{brandList}}' bindcolumnchange="bindBrandPickerColumnChange" range-key='productName' data-item='{{brandList[1][brandIndex[1]]}}'>
+<view class='down_menu'><text wx:if="{{brandName}}">{{brandName}}</text><text wx:else style='color:#9C9EA1;'>请选择</text> <text class='iconfont iconhome_icon_shaixuan'></text></view>
+</picker>
+<view class='tips'>* 没有列出的品牌，请选择“其他”</view>
+<view class='brand danwei'>施肥数量 | 施肥单位</view>
+<view class='shuliang'><input placeholder='请输入' bindinput='getshifeisum' type='number' maxlength='7'></input>
+ <view class="{{company.ke?'selected':''}}" data-tab='1' bindtap='selectCompany'>kg/棵</view>
+ <view class="{{company.mu?'selected':''}}" data-tab='2' bindtap='selectCompany'>kg/亩</view>
+ <view class="{{company.qu?'selected':''}}" data-tab='3' bindtap='selectCompany'>kg/园区</view>
+ </view>
+ <view class='brand danwei'>施肥方式</view>
+ <picker bindchange='bindRecord' value='{{recordIndex}}' range='{{recordList}}' range-key="name">
+ <view class='down_menu'><text wx:if="{{recordName}}">{{recordName}}</text><text wx:else style='color:#9C9EA1;'>请选择</text><text class='iconfont iconhome_icon_shaixuan'></text></view>
+ </picker>
+ <view class='brand danwei'>施肥结果</view>
+ <view class='label'>
+ <view wx:for="{{resultList}}" class="{{item.selected?'selected':''}}" bindtap='selectResult' wx:key="{{index}}" data-item='{{item}}'>{{item.name}}</view>
+ </view>
+ <view class='brand danwei'>施肥时间</view>
+ <picker mode="date" value="{{date}}" start="2000-01-01"  bindchange="bindDateChange">
+ <view class='down_menu'><text wx:if="{{date}}">{{date}}</text><text wx:else style='color:#9C9EA1;'>请选择</text><text class='iconfont iconhome_icon_shaixuan'></text></view>
+ </picker>
+ </view>
+
+
+
+<view wx:if="{{!checked}}" class='disabled'>
+ <view class='brand'>品牌</view>
+<view class='down_menu'><text wx:if="{{brandName}}">{{brandName}}</text><text wx:else style='color:#CDCED0;'>请选择</text> <text class='iconfont iconhome_icon_shaixuan jingyong'></text></view>
+<view class='tips'>* 没有列出的品牌，请选择“其他</view>
+<view class='brand danwei'>施肥数量 | 施肥单位</view>
+<view class='shuliang'><input placeholder-class="place-holder" placeholder='请输入' disabled="true"></input>
+ <view>kg/棵</view>
+ <view>kg/亩</view>
+ <view>kg/园区</view>
+ </view>
+ <view class='brand danwei'>施肥方式</view>
+ <view class='down_menu'><text wx:if="{{recordName}}">{{recordName}}</text><text wx:else style='color:#CDCED0;'>请选择</text><text class='iconfont iconhome_icon_shaixuan jingyong'></text></view>
+
+ <view class='brand danwei'>施肥结果</view>
+ <view class='label'>
+ <view wx:for="{{resultList}}" wx:key="{{index}}">{{item.name}}</view>
+ </view>
+ <view class='brand danwei'>施肥时间</view>
+ <view class='down_menu'><text wx:if="{{date}}">{{date}}</text><text wx:else style='color:#CDCED0;'>请选择</text><text class='iconfont iconhome_icon_shaixuan jingyong'></text></view>
+</view>
+
+
+ <button class='submit' bindtap='isSubmit' disabled="{{disabled}}">确定</button>
+ <view style='height:20px;'></view>
+</view>

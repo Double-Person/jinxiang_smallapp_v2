@@ -1,0 +1,27 @@
+/* pages/record/record.wxss */
+.item{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+.item .time{
+  color: #09BB45;
+  font-size: 14px;
+}
+.item .record{
+  width: 266px;
+  border-bottom: 1px solid #D2D6DC;
+  color: #323438;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+.item .record view:nth-child(1){
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.item .record view{
+  line-height: 20px;
+  margin-bottom: 5px;
+}

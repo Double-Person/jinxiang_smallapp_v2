@@ -1,0 +1,19 @@
+<!--pages/plantInfo/plantInfo.wxml-->
+<view class='container'>
+<view class='careful'>
+<view><text class='iconfont iconhome_notice'></text>请注意！</view>
+<view>* 当植株第一次被扫码的时候需要添加基本信息</view>
+<view>* 为了方便日后查找，请在植株名称中对植株加以描述，例如“池塘边第3坎第7棵树”</view>
+</view>
+
+<view class='name'>{{options.userName}}</view>
+<view class='type'>
+<view><text class='iconfont iconhome_place'></text>{{options.daqu}}</view>
+<view><text class='iconfont iconhome_pinzhong'></text>{{options.varietiesName}} | {{options.subName}}</view>
+</view>
+<view class='title'>树龄</view>
+<input placeholder='请输入树龄（必填）' bindinput='getAge' type='number'></input>
+<view class='title'>植株名称</view>
+<input placeholder='请描述植株的位置' bindinput='getName'></input>
+<button class='submit' bindtap='sampleCollection'>确定</button>
+</view>

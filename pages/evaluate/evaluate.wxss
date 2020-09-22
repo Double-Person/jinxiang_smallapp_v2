@@ -1,0 +1,188 @@
+/* pages/evaluate/evaluate.wxss */
+
+.top-info .left {
+  color: #707276;
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 40rpx;
+  margin-bottom: 20rpx;
+  margin-left: 30rpx;
+}
+
+.top-info .catgrory {
+  margin-top: 10rpx;
+}
+
+.top-info .catgrory text {
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #323438;
+  line-height: 56rpx;
+}
+
+.top-info .age text, .top-info .skey text, .top-info .times text,  {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #323438;
+  line-height: 40rpx;
+}
+
+.top-info .times {
+  margin-bottom: 40rpx;
+}
+
+.show-images {
+  background: #f2f3f6;
+  padding: 10rpx 0;
+}
+
+.show-images .any-images {
+  width: 92%;
+  margin: 30rpx auto 0 auto;
+  border-radius: 12rpx;
+}
+
+.any-images:first-child {
+  margin-top: 40rpx;
+}
+
+.show-images .any-images .title {
+  background: #fff;
+  width: 100%;
+  height: 108rpx;
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #323438;
+  line-height: 108rpx;
+  padding-left: 30rpx;
+}
+
+.show-images .any-images .image {
+  width: 100%;
+  display: block;
+}
+
+.show-images .any-images .image image {
+  width: 100%;
+}
+
+/* 评价选项 */
+
+.eatimate-contenter {
+  background: #f2f3f6;
+  width: 100%;
+  text-align: center;
+  padding-top: 40rpx;
+}
+
+.estimate {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+
+.estimate::after {
+  content: '';
+  width: 23%;
+  border: 1px solid transparent;
+  margin-left: auto;
+  /* flex: left; */
+}
+
+.estimate .estimate-item {
+  width: 23%;
+  margin: 12rpx 0%;
+  display: inline-block;
+  height: 80rpx;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border: 1px #9da09a solid;
+  border-radius: 6rpx;
+}
+
+.estimate-item:last-child {
+  margin-left: 2.5%;
+}
+
+.activeClassName {
+  background: #c0933c;
+  color: #fff;
+  border: 1px #fff solid;
+}
+
+.btn-contenr{
+  background: #f2f3f6;
+}
+
+.btn {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn button {
+  display: inline-block;
+  width: 48%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  margin: 40rpx auto 72rpx auto;
+}
+
+.nextGroup {
+  background: #09bb45;
+  color: #fff;
+}
+.nextGroupNull{
+  background: #B5EAC7;
+  color: #fff;
+}
+.detailNull{
+  color: #9DA09A;
+  background: #fff;
+}
+
+.detail {
+  background: #fff;
+  border: #9da09a solid 1px;
+}
+
+/* 没有数据的时候 */
+
+.nothing {
+  padding-top: 216rpx;
+}
+
+.nothing-images {
+  width: 164rpx;
+  height: 154rpx;
+  margin: 0 auto;
+}
+
+.nothing-images image {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.nothing-title {
+  width: 100%;
+  margin-top: 36rpx;
+  text-align: center;
+  color: #707276;
+  font-size: 36rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+}

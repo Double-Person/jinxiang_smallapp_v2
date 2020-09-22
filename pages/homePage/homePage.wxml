@@ -1,0 +1,32 @@
+<!--pages/index/index.wxml-->
+<view class='container'>
+<view class='name'>{{options.userName}}</view>
+<view class='region'>
+当前工作在 <view class='select_region' bindtap='openMenu'>{{options.cityName}}<text class='iconfont iconhome_icon_shaixuan'></text></view>
+</view>
+<view class='menu' wx:if="{{menu}}">
+<view wx:for="{{regionName}}" wx:key="index" data-item='{{item}}' bindtap='selectedCity'>{{item.regionName}} <text class="iconfont iconicon_chose" wx:if="{{item.isSelected}}"></text></view>
+</view>
+</view>
+<view class='mask' wx:if="{{menu}}">
+  </view>
+<view class='list'>
+<view class='notice'><text class='iconfont iconhome_notice'></text>请选择您要采集的种植区</view>
+
+<view class='item' wx:for="{{regionInfo}}" wx:key="index" data-item='{{item}}' bindtap='openCollection'>
+<view class='item_title'>{{item.growerName}} <view><text class='iconfont iconhome_place'></text>{{item.name}}</view></view>
+<view class='label'>
+<text>{{item.landTypeName}}</text><text>{{item.soilTypeName}}</text><text>{{item.irrTypeName}}</text><text>{{item.waterTypeName}}</text>
+</view>
+<view class='details'>
+<view class='left'>
+<view class='info'><text class='iconfont iconhome_pinzhong'></text> {{item.varietiesName}} <text style='margin:0 10px;color:#A8AAAD;'>Ι</text>  <text class='shijie'>{{item.subVarietiesName}}</text></view>
+<view class='info'><text class='iconfont iconhome_shuliang'></text> {{item.plantArea}}亩 <text style='margin:0 10px;color:#A8AAAD;'>Ι</text> {{item.plantNum}}棵</view>
+<view class='address'>{{item.growerGeoText}}</view>
+</view>
+<!-- <view class='right'>进入<text class='iconfont iconcaijiqu_more'></text></view> -->
+<button class='right'>进入<text class='iconfont iconcaijiqu_more'></text></button>
+</view>
+</view>
+
+</view>

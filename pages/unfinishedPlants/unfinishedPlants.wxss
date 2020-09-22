@@ -1,0 +1,123 @@
+/* pages/unfinishedPlants/unfinishedPlants.wxss */
+
+page {
+  background: #f2f3f6;
+}
+
+.container {
+  padding: 0 15px;
+  background: #fff;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.label {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.label view {
+  color: #323438;
+  font-size: 13px;
+  margin-right: 35px;
+  margin-bottom: 8px;
+}
+
+.label view .iconfont {
+  margin-right: 10px;
+  color: rgb(155, 152, 153);
+}
+
+.shu {
+  margin: 0 10px;
+}
+
+.plant_list {
+  padding: 15px;
+}
+
+.item {
+  /* height: 122px; */
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 14px -6px rgba(9, 29, 72, 0.3);
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.item .bianhao{
+  color: #323438;
+  font-size: 20px;
+  font-weight: bold;
+}
+.item .buwei{
+  color: #323438;
+  font-size: 14px;
+  margin: 20px 0 10px 0; 
+}
+.item .buwei text{
+  color: #C0933C;
+  font-weight: bold;
+}
+.item .tupian{
+  color: #DF1D30;
+  font-size: 14px;
+}
+.iconhome_notice{
+  font-size: 14px;
+}
+.item:last-child{
+  margin-bottom: 0;
+}
+
+.btn{
+position: fixed;
+  width: 100%;
+  padding: 0 15px;
+  bottom: 10px;
+}
+
+.btn .submit{
+  background: #09BB45;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  padding: 0 15px;
+  color: #fff;
+  height: 50px;
+}
+button:after,button:before{
+  border: none;
+}
+
+.btn .button-hover {
+  background: #B5EAC7 !important;
+  color: #FFFFFF;
+  border: none;
+}
+
+button[disabled] {
+  background: #B5EAC7;
+  color: #FFFFFF;
+  border: none;
+}
+button[disabled]:not([type]) {
+color:#FFFFFF;
+background-color:#B5EAC7;
+border: none;
+}
+button[disabled]:not([type])::after{
+  border: none;
+}
+.button-hover::after{
+  display: none;
+}
+.tishitext{
+  text-align: center;
+margin-top: 105px;
+
+}

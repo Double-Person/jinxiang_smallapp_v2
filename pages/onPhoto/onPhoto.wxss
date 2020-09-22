@@ -1,0 +1,82 @@
+/* pages/onPhoto/onPhoto.wxss */
+.previe{
+  width: 46px;
+  height: 46px;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  position: absolute;
+  bottom: 135px;
+  right: 15px;
+}
+
+cover-image{
+  width: 100%;
+  height: 100%;
+}
+.paizhao .yuan{
+  border: 1px solid #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paizhao .yuan .xiaoyun{
+  border: 1px solid #fff;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #fff;
+}
+button[type=primary]{
+  background: rgba(230, 120, 110, 0);
+}
+.demo-text-1{
+  width: 100%;
+  position: absolute;
+  background:rgba(0,0,0,0.5);
+  font-size: 20px;
+  color: #fff;
+  line-height: 36px;
+  text-align: center;
+  height: 36px;
+  padding: 8px 0;
+  bottom: 120px;
+}
+.demo-text-1 .view{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+  margin-right: 10px;
+  line-height: 36px;
+}
+.demo-text-2{
+  position: absolute;
+  /* margin-top: 862rpx; */
+  bottom: 0;
+  height: 120px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:rgba(0,0,0,0.5);
+  width: 92%;
+}
+.demo-text-2 .text{
+  width: 82px;
+  height: 40px;
+  background:rgba(255,255,255,0.8);
+  color: #09BB45;
+  font-size: 13px;
+  border-radius: 3px;
+  border: 1px solid #09BB45;
+  line-height: 40px;
+  text-align: center;
+}
+
+button[disabled][type=primary]{
+  background-color:rgba(230, 120, 110, 0);
+}

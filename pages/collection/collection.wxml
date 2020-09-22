@@ -1,0 +1,31 @@
+<wxs module="stateJudgment" src="./../../public.wxs"></wxs>
+<view class='container'>
+<view class='name'>{{options.plantName}}</view>
+<view class='label'>
+<view><text class='iconfont iconhome_place'></text>{{options.cityName}}</view>
+<view><text class='iconfont iconhome_pinzhong'></text>{{options.varietiesName}}<text class='shu'><text style='color:#A8AAAD;'>Ι</text></text>{{options.subName}}</view>
+<view><text class='iconfont iconcaijiqu_icon_number'></text>采样数量：{{options.sampleNum}}株</view>
+</view>
+</view>
+<view class='list'>
+<view class='notice'><text class='iconfont iconhome_notice'></text>请选择当前植株的生长阶段，开始扫码</view>
+
+<view class='item' wx:for="{{plantList}}" wx:key="index" data-item='{{item}}'>
+<view class='title {{stateJudgment.stateJudgment(item.stageStatus)}}'>{{item.stageTypeName}} <text>{{item.stageStatus}}</text></view>
+<view class='info'>
+<view class='left'>
+<view><text class='yuan'></text>采样进度：<text class='number'>{{item.sampleNum}}/{{options.sampleNum}}</text></view>
+<view><text class='yuan'></text>施肥记录：<text class='number'>{{item.manureRecordNum}}</text></view>
+<view class='add'>
+<button class='shifei' bindtap='addFertilizer' data-item='{{item}}'>添加施肥</button>
+<!-- <button class='shifei' bindtap='addUnfinishedPlants' data-item='{{item}}' hidden="{{item.stageStatus!='已完成'}}">未完成植株</button> -->
+<button class='shifei' bindtap='addUnfinishedPlants' data-item='{{item}}'>未完成植株</button>
+ <text class="jilu" wx:if="{{!item.manureRecordNum}}" data-item='{{item}}'>查看施肥记录</text> 
+ <text class='jilu chakan' wx:if="{{item.manureRecordNum}}" bindtap='lookRecord' data-item='{{item}}'>查看施肥记录</text>
+ </view>
+</view>
+<button class='right' bindtap='sweepCode' data-item='{{item}}'>扫码<text class='iconfont iconcaijiqu_more'></text></button>
+</view>
+</view>
+
+</view>

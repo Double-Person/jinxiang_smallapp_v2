@@ -1,0 +1,41 @@
+<!--详细点评-->
+<view class="contenter" wx:if='{{nonInfectiousDiseases[0].type==5}}'>
+  <view wx:if='{{sovleList[0].type==2}}'>传染性病害</view>
+  <view wx:for='{{sovleList}}' wx:key="index" wx:for-item='item'>
+    <view class="title">{{item.name}}</view>
+    <view class="title-item">
+      <view class="item {{item.check==true?'activeClassName':''}}" wx:for="{{item.value}}" wx:for-index="cellindex" bindtap="changeEstimate" data-item="{{item}}" data-index="{{index}}" data-paIndex="{{cellindex}}">{{ item.keys}}</view>
+    </view>
+  </view>
+
+  <button class="nextGroup" bindtap="nextGroup">下一张</button>
+</view>
+<!-- *********** -->
+<view class="contenter">
+
+ <view class="navTitle nonInfectiousDiseases" wx:if='{{nonInfectiousDiseases[0].type==3}}'>非传染性疾病</view>
+  <view wx:for='{{nonInfectiousDiseases}}' wx:key="index" wx:for-item='item'>
+    <view class="title">{{item.name}}</view>
+    <view class="title-item">
+      <view class="item {{item.check==true?'activeClassName':''}}" wx:for="{{item.value}}" wx:key='{{item.id}}' wx:for-index="cellindex" bindtap="changeNotEstimate" data-item="{{item}}" data-index="{{index}}" data-paIndex="{{cellindex}}">{{ item.keys}}</view>
+    </view>
+  </view>
+
+
+
+  <view class="navTitle infectiousDiseases" wx:if='{{infectiousDiseases[0].type==2}}'>传染性病害</view>
+  <view wx:for='{{infectiousDiseases}}' wx:key="index" wx:for-item='item'>
+    <view class="title">{{item.name}}</view>
+    <view class="title-item">
+      <view class="item {{item.check==true?'activeClassName':''}}" wx:for="{{item.value}}" wx:key='{{item.id}}' wx:for-index="cellindex" bindtap="changeEstimate" data-item="{{item}}" data-index="{{index}}" data-paIndex="{{cellindex}}">{{ item.keys}}</view>
+    </view>
+  </view>
+
+ 
+
+
+
+
+  <button class="nextGroup" disabled="{{isDisabled}}" bindtap="nextGroup">下一张</button>
+
+</view>

@@ -1,0 +1,40 @@
+<loading hidden="{{loading}}">
+        加载中...
+</loading>
+
+      <cover-view class="flex-item demo-text-1" wx:if='{{selectPhotograph}}'>
+      ●  {{options.stage}} {{showMustList[yipaiMust==showMustList.length?yipaiMust-1:yipaiMust].partName}}    （必拍 {{yipaiMust+1>showMustList.length?showMustList.length:yipaiMust+1}}/{{showMustList.length}}）  
+      </cover-view>
+       <cover-view class="flex-item demo-text-1" wx:else>
+      ●  {{options.stage}} {{shownoNeedList[yipaiNoNeed>=shownoNeedList.length?yipaiNoNeed-1:yipaiNoNeed].partName}}    （选拍 {{yipaiNoNeed+1>shownoNeedList.length?shownoNeedList.length:yipaiNoNeed+1}}/{{shownoNeedList.length}}）
+      </cover-view>
+      <camera hidden='{{!loading}}'
+        flash="off"
+        device-position="{{position}}"
+        binderror="error"
+        style="width: 100%; height: calc(100vh - 172px);"
+      >
+      
+      </camera>
+      <cover-view class="flex-item demo-text-2"><cover-view class='text' bindtap='finishedShooting'>拍完了</cover-view>
+      <button type="primary" bindtap='takePhoto' class='paizhao'>
+      <cover-view class="yuan">
+      <cover-view class='xiaoyun'></cover-view>
+      </cover-view>
+      </button>
+
+      <cover-view class='text' bindtap='skip' wx:if="{{!selectPhotograph}}" disabled='{{buttom}}'>跳过</cover-view>
+      <cover-view class='text' wx:else style='background:rgba(255,255,255,0.5);border:1px solid rgba(179,196,185,1);color:rgba(205,206,208,1);'>跳过</cover-view>
+      
+      </cover-view>
+      <!-- <cover-view class='previe'>
+      <cover-image src="{{src}}"  mode="widthFix"></cover-image>      
+      </cover-view> -->
+
+<view style='width:0px;height:0px;overflow:hidden;margin-left:-2000px;'>
+  <canvas canvas-id="photo-canvas" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px;'></canvas>
+  <!-- <canvas canvas-id="photo-canvas1" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px;'></canvas>
+  <canvas canvas-id="photo-canvas2" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px;'></canvas>
+  <canvas canvas-id="photo-canvas3" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px;'></canvas>
+  <canvas canvas-id="photo-canvas4" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px;'></canvas> -->
+</view>

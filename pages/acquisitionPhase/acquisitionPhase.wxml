@@ -1,0 +1,64 @@
+<!--pages/acquisitionPhase/acquisitionPhase.wxml-->
+<wxs module="stategment" src="./../../public.wxs"></wxs>
+<view class='container' wx:if="{{!camera}}">
+<view bindtap='clearstorage'>植株编号：<text class='number'>{{plantInfo.name}}</text></view>
+<view>植株树龄：<text>{{plantInfo.age}}年</text></view>
+<view>植株采样阶段： <text>{{options.stage}}</text></view>
+<view>植株采样进度： <text class='type'>{{stategment.stategment(plantInfo.status)}}</text></view>
+</view>
+<view class='list' wx:if="{{!camera}}">
+<view class='notice'><text class='iconfont iconhome_notice'></text>请根据提示的采集部位进行拍照</view>
+
+<view class='warp' wx:for="{{mustList}}" wx:key="{{index}}" data-item='{{item}}' wx:if="item.delFlag">
+<view class='item' bindtap='shooting' wx:if="{{item.img==null?true:false}}">
+<view class='title'>{{item.partName}}</view>
+<view class='camera'>
+<text class='iconfont iconjieduan_picture'></text>
+点击拍照
+</view>
+</view>
+
+<view class='item' wx:if="{{item.img==null?false:true}}">
+<view class='title'>{{item.partName}}<view>采集时间：<text>{{item.date}}</text></view></view>
+<view class='preview'>
+<image src='{{item.img}}'></image>
+<view bindtap='gotoShow' data-index='{{index}}' data-item='{{item}}'>重拍<text class='iconfont iconcaijiqu_more'></text></view>
+</view>
+</view>
+
+</view>
+
+
+<view class='notice'><text class='iconfont iconhome_notice'></text>以下的照片，如果没有可不采集</view>
+
+<view class='warp' wx:for="{{noNeedList}}" wx:key="{{index}}" data-item='{{item}}' >
+
+<view class='item' bindtap='shooting' wx:if="{{item.img==null?true:false}}">
+<view class='title'>{{item.partName}}</view>
+<view class='camera'>
+<text class='iconfont iconjieduan_picture'></text>
+点击拍照
+</view>
+</view>
+
+<view class='item' wx:if="{{item.img==null?false:true}}">
+<view class='title'>{{item.partName}}<view>采集时间：<text>{{item.date}}</text></view></view>
+<view class='preview'>
+<image src='{{item.img}}'></image>
+<view bindtap='gotoShow' data-index='{{index}}' data-item='{{item}}'>重拍<text class='iconfont iconcaijiqu_more'></text></view>
+</view>
+</view>
+
+</view>
+
+</view>
+
+
+<view style='width:0px;height:0px;overflow:hidden;'>
+  <canvas canvas-id="photo-canvas" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px; left:100000px'></canvas>
+</view>
+
+<view class='btn'>
+<button class='submit' bindtap='backed'>完成</button>
+</view>
+<view style='height:80px;'></view>

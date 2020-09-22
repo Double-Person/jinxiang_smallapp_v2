@@ -1,0 +1,100 @@
+/**app.wxss**/
+view,input{
+ box-sizing: border-box;
+}
+page{
+  /* min-width: 375px; */
+}
+
+button:after,button:before{
+  border: none !important;
+}
+.button-hover {
+  background: #B5EAC7 !important;
+  color: #FFFFFF;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1565592973283'); /* IE9 */
+  src: url('iconfont.eot?t=1565592973283#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('iconfont.woff?t=1565592973283') format('woff'),
+  url('iconfont.ttf?t=1565592973283') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1565592973283#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconhome_icon_shaixuan:before {
+  content: "\e621";
+}
+
+.iconhome_place:before {
+  content: "\e622";
+}
+
+.iconhome_notice:before {
+  content: "\e623";
+}
+
+.iconhome_pinzhong:before {
+  content: "\e624";
+}
+
+.iconhome_shuliang:before {
+  content: "\e625";
+}
+
+.iconcaijiqu_icon_home:before {
+  content: "\e627";
+}
+
+.iconcaijiqu_icon_number:before {
+  content: "\e628";
+}
+
+.iconcaijiqu_more:before {
+  content: "\e626";
+}
+
+.iconjieduan_picture:before {
+  content: "\e629";
+}
+
+.iconjieduan_takeapicture:before {
+  content: "\e62a";
+}
+
+.iconicon_shaixuan_dis:before {
+  content: "\e62b";
+}
+
+.iconapp_icon_close:before {
+  content: "\e62c";
+}
+
+.iconicon_chose:before {
+  content: "\e635";
+}
+
+.iconpeople:before {
+  content: "\e680";
+}
+

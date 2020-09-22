@@ -1,0 +1,16 @@
+<!--pages/record/record.wxml-->
+<view class="container">
+<!-- wx:if="{{item.spreadMethodName!=null}}" -->
+<view class='item' wx:for="{{recordList}}" wx:key="{{index}}">
+<view class='time'>{{item.stringSpreadDate}}</view>
+<view class='record' wx:if="{{item.spreadMethodName!=null}}">
+<view>{{item.manureType.bandName}}</view>
+<view>{{item.manureType.npk}} {{item.manureType.productName}} | {{item.spreadMethodName}}</view>
+<view>{{item.spreadNum}}{{item.spreadUnit}}</view>
+</view>
+<view class='record' wx:else>
+当前阶段没有施肥
+</view>
+</view>
+
+</view>

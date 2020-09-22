@@ -1,0 +1,170 @@
+/* pages/collection/collection.wxss */
+page{
+  background: #F2F3F6;
+}
+.container{
+  padding: 0 15px;
+  background: #fff;
+}
+.name{
+  font-size: 24px;
+  font-weight: bold;
+}
+.label{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.label view{
+  color: #323438;
+  font-size: 13px;
+  margin-right: 35px;
+  margin-bottom: 8px;
+}
+.label view .iconfont{
+  margin-right: 10px;
+  color: rgb(155, 152, 153);
+}
+.shu{
+  margin: 0 10px;
+}
+.list{
+  padding: 0 15px;
+  padding-top: 10px;
+}
+.notice{
+  background: #FFFAF1;
+  color: #C0933C;
+  border: 1px solid #DBBE89;
+  border-radius: 3px;
+  font-size: 13px;
+  height: 30px;
+  /* line-height: 30px; */
+  padding: 0 10px;
+  margin-bottom: 10px;
+  display:flex;
+  align-items: center;
+}
+.iconhome_notice{
+  margin-right: 5px;
+}
+.item{
+  height: 186px;
+  background: #fff;
+  box-shadow:0px 4px 14px -6px rgba(9,29,72,0.3);
+  border-radius:6px;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #323438;
+  font-size: 20px;
+  font-weight: bold;
+  height: 53px;
+  padding: 0 15px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.wancheng{
+  background: rgb(180, 236 , 203);
+}
+.wancheng text{
+  color: #09BB45;
+}
+.weikaishi text{
+  color: #DF1D30;
+}
+.weiwancheng text{
+  color: #C0933C;
+}
+.weikaishi{
+  background: rgb(249, 191, 196);
+}
+.weiwancheng{
+background: rgb(237, 225, 201);
+}
+.title text{
+  font-size: 14px;
+}
+.right{
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #09BB45;
+  font-size: 16px;
+  line-height: 72px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+.left>view{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #323438;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.info{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 15px;
+  align-items: center;
+}
+.iconcaijiqu_more{
+  font-size: 13px;
+}
+.yuan{
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #9C9EA1;
+  margin-right: 10px;
+}
+.number{
+  color: #C0933C;
+}
+.shifei{
+  width: 82px;
+  height: 32px;
+  border: 1px solid #09BB45;
+  color: #09BB45;
+  border-radius: 16px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 13px;
+}
+.shifei:nth-child(1){
+  margin-right: 12px;
+}
+
+.add{
+  padding-top: 10px;
+  position: relative;
+}
+.jilu{
+  position: absolute;
+  top: -25px;
+  right: -18px;
+  /* width: 75px; */
+}
+.add text{
+  border-bottom: 1px solid #CED0D4;
+  color: #CED0D4;
+  margin-left: 10px;
+}
+.add .chakan{
+  color: #707276;
+  border-bottom: 1px solid #707276;
+}
+.item{
+  margin-bottom: 15px;
+}
+button{
+  margin: 0;
+  padding: 0;
+}

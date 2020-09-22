@@ -1,0 +1,19 @@
+<view class='nav-title'>
+    <view>!</view>
+    <text>仅限金象云内部员工使用</text>
+  </view>
+<view class="specialistLogin">
+  
+  <view class="top-tips">
+    <image class="logo-tips" src='../../img/logo.png'></image>
+  </view>
+
+
+  <view class="jurisdiction">
+    <input type="text" placeholder="请输入账号" value="{{username}}" bindinput="updateValueUser"></input>
+    <input type="password" placeholder="请输入密码" value="{{password}}" bindinput="updateValuePwd"></input>
+    <text>需获取您微信头像昵称的授权</text>
+
+    <button class="login {{isNull==true?'disableBtn':'notDisableBtn'}} " bindtap="login">确定</button>
+  </view>
+</view>

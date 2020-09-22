@@ -1,0 +1,35 @@
+// 判断状态
+var stateJudgment=function(item){
+  var result = "";
+  if(item=="已完成"){
+    result ="wancheng"
+  }
+  if (item == "未完成") {
+    result = "weiwancheng"
+  }
+  if (item == "未开始") {
+    result = "weikaishi"
+  }
+  return result;
+}
+
+var stategment = function (item) {
+  var result = "";
+  if (item == "0") {
+    result = "未开始"
+  }
+  if (item == "1") {
+    result = "进行中"
+  }
+  if (item == "2") {
+    result = "已完成"
+  }
+  return result;
+}
+
+
+
+module.exports = {
+  stateJudgment: stateJudgment,
+  stategment: stategment,
+};

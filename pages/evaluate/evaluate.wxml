@@ -1,0 +1,57 @@
+<!--植株评定-->
+<!-- 没有数据 -->
+<view class="nothing" wx:if="{{noData}}">
+  <view class="nothing-images">
+    <image src="./images/pic_nothing@2x.png"></image>
+  </view>
+  <view class="nothing-title">{{noDataMessage}}</view>
+</view>
+<!-- 有数据 -->
+<view wx:else>
+  <view class="top-info">
+    <view class="catgrory left">品种：
+      <text>{{plantsPhotos[0].varietiesName}}</text>
+    </view>
+    <view class="age left">子品种：
+      <text>{{plantsPhotos[0].subVarietiesName}}</text>
+    </view>
+    <view class="age left">植株树龄：
+      <text>{{plantsPhotos[0].age}}年</text>
+    </view>
+    <view class="skey left">二维码ID：
+      <text>{{plantsPhotos[0].qrCodeId}}</text>
+    </view>
+    <view class="times left">采集时间：
+      <text>{{formatDate}}</text>
+    </view>
+  </view>
+
+  <view class="show-images">
+    <view class="any-images" wx:for="{{plantsPhotos}}" wx:key='index'>
+      <view class="title">{{item.partName}}</view>
+      <view class="image">
+        <image bindtap="previewImages" src="{{item.photoImg}}" bindload='imageLoad' binderror='binderror'></image>
+      </view>
+    </view>
+
+
+  </view>
+
+  <!-- 评定选项 -->
+  <view class="eatimate-contenter">
+    <view class="estimate">
+
+      <view class="estimate-item {{index==currentIndex?'activeClassName':'false'}}" wx:for="{{lookLikes}}" wx:key="index" bindtap="changeEstimate" data-item="{{item}}" data-index="{{index}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <view class="btn-contenr">
+  <view class="btn">
+    <button class=" {{checkEstimate==''?'nextGroupNull':'nextGroup'}}" bindtap="nextGroup">下一张</button>
+    <button class=" {{checkEstimate==''?'detailNull':'detail'}}" bindtap="detail" wx:if="{{plantsDetails.length}}">详细点评</button>
+  </view>
+  </view>
+
+</view>

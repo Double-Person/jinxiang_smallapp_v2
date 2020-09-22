@@ -1,0 +1,41 @@
+<!--index.wxml-->
+
+<view class="container" wx:if="{{!tips}}">
+  <view class="index-tips">
+    <view>
+      <view class="jinggao">!</view>
+      仅限金象云内部员工使用
+    </view>
+  </view>
+
+  <view class='userinfo' wx:if="{{isUserInfo}}">
+  </view>
+  <view class='authorize' wx:if="{{isUserInfo}}">
+    <view class='authorize_title'>授权后，您才能正常使用金象云的服务功能。</view>
+    <view class='authorize_bottom'>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+    </view>
+  </view>
+  <image src='../../img/logo.png'></image>
+  <van-cell-group>
+    <van-field value="{{ name }}" placeholder="请输入姓名" bind:change="getName" />
+    <view style='height:15px;'> </view>
+    <van-field value="{{ phone }}" placeholder="请输入手机号" error-message="{{isPhone?'手机号格式错误':''}}" border="{{ false }}" maxlength="11" bind:change="getPhone" />
+  </van-cell-group>
+  <view class="login-tips">需获取您微信头像昵称的授权</view>
+  <button bindtap='login' disabled="{{disabled}}">确定</button>
+
+</view>
+
+<view class="tips-page" wx:if="{{tips}}">
+  <view class="index-tips">
+    <view>
+      金象云仅供金象内部员工使用，不提供在线注册功能，新用户请联系您所在的大区负责人
+    </view>
+  </view>
+
+  <image class="logo-tips" src='../../img/logo.png'></image>
+
+  <button class="tips-buttom" bindtap="tipsHide">登录</button>
+  <button class="specialist-login" bindtap='specialistLogin'>专家登录</button>
+</view>

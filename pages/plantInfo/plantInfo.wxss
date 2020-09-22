@@ -1,0 +1,65 @@
+/* pages/plantInfo/plantInfo.wxss */
+.container{
+  padding: 0 15px;
+}
+.careful{
+  background: #FFFAF1;
+  border-radius: 3px;
+  height: 89px;
+  font-size: 13px;
+  color: #C0933C;
+  padding: 6px 10px;
+}
+.iconhome_notice{
+  color: #C0933C;
+  font-size: 13px;
+  margin-right: 5px;
+}
+.careful view{
+  line-height: 18px;
+}
+.careful view:nth-child(2){
+  margin-top: 5px;
+}
+.name{
+  color: #323438;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.type{
+  display: flex;
+  justify-content: flex-start;
+  color: #707276;
+  font-size: 13px;
+}
+.type view{
+  margin-right: 30px;
+}
+.type .iconfont{
+  margin-right: 10px;
+  color: #707276;
+}
+.title{
+  color: #323438;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+input{
+  border: 1px solid #D2D6DC;
+  padding-left: 15px;
+  font-size: 16px;
+  height: 50px;
+  border-radius: 3px;
+}
+.submit{
+  height: 50px;
+  color: #fff;
+  background: #09BB45;
+  border-radius: 3px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,31 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/specialistLogin/specialistLogin",
+    "pages/evaluate/evaluate",
+    "pages/detail/detail",
+    
+    
+    
+    "pages/homePage/homePage",
+    "pages/acquisitionPhase/acquisitionPhase",
+    "pages/plantInfo/plantInfo",
+    "pages/record/record",
+    "pages/applyFertilizer/applyFertilizer",
+    "pages/collection/collection",
+    "pages/onPhoto/onPhoto",
+    "pages/unfinishedPlants/unfinishedPlants"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "金象云",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-switch": "vant-weapp/dist/switch/index",
+    "van-field": "vant-weapp/dist/field/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,36 @@
+<view class='container'>
+  <view class='name'>{{options.cityName}}</view>
+  <view class='label'>
+    <view>
+      <text class='iconfont iconhome_shuliang'></text>{{options.stageTypeName}}</view>
+    <view>
+      <text class='iconfont iconhome_pinzhong'></text>{{options.varietiesName}}
+      <text class='shu'><text style='color:#A8AAAD;'>Ι</text></text>{{options.subName}}</view>
+    <view>
+      <text class='iconfont iconpeople'></text>{{options.plantName}}</view>
+  </view>
+</view>
+
+<view class="show_shot" hidden="{{!shot}}">
+<view class="plant_list">
+  <view class="item" wx:for="{{plantList}}" wx:key="index">
+    <view class="bianhao">
+      植株编号：{{item.name}}
+    </view>
+    <view class="buwei">
+      部位：<text>{{item.part}}</text>
+    </view>
+    <view class="tupian">
+    <text class="iconfont iconhome_notice"></text> 未拍摄或上传失败
+    </view>
+  </view>
+</view>
+<view class='btn'>
+<button class='submit' bindtap='backed'>确定</button>
+</view>
+<view style='height:60px;'></view>
+</view>
+
+<view class="tishitext" hidden="{{shot}}">
+{{collectionText}}
+</view>

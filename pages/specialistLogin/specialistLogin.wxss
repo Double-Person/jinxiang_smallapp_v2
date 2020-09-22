@@ -1,0 +1,80 @@
+.nav-title {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #ec4959;
+  font-size: 26rpx;
+  background: #fff1f1;
+}
+
+.nav-title>view {
+  display: inline-block;
+  width: 24rpx;
+  height: 24rpx;
+  font-size: 24rpx;
+  border-radius: 50%;
+  background: #df1d30;
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
+  margin: 18rpx 10rpx 18rpx 52rpx;
+  line-height: 24rpx;
+}
+
+.specialistLogin {
+  width: 84%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.top-tips {
+  width: 160rpx;
+  height: 188rpx;
+  margin: 20rpx auto 80rpx auto;
+}
+
+.top-tips image {
+  width: 100%;
+  height: 100%;
+}
+
+.jurisdiction input {
+  width: 100%;
+  height: 100rpx;
+  text-align: left;
+  padding-left: 40rpx;
+  background: #f2f3f6;
+  margin-bottom: 30rpx;
+  color: #707276;
+  font-size: 32rpx;
+}
+
+.jurisdiction text {
+  color: #df1d30;
+  display: block;
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 26rpx;
+  text-align: left;
+  padding: 0;
+}
+
+.jurisdiction .login{
+  margin-top: 16rpx;
+  font-size: 40rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+.disableBtn{
+  background: #B5EAC7;
+}
+.notDisableBtn{
+  background: #09bb45;
+}
